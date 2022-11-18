@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="login-style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:700,500,1000&display=swap" rel="stylesheet">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+
+<script>
+
+    $(function() {
+
+
+   var people = [];
+
+   $.getJSON('  https://api.thingspeak.com/channels/1013258/feeds.json?results=1', function(data) {
+       $.each(data.feeds, function(i, f) {
+          var tblRow = "<tr>" + "<td>" + f.created_at + "</td>" +"<td>" + f.entry_id + "</td>" + "<td>" + f.field8 + "</td>"+"</tr>"
+
+           $(tblRow).appendTo("#userdata tbody");
+     });
+
+   });
+
+});
+</script>
+
+</head>
+<body>
+    <main>
+        <div class="background">
+            <div class="text">
+                <center style="color:blue">
+<h1>PREDICTING COLLEGES</h1>
+
+</center><br>
+<center>
+<form action="https://api.thingspeak.com/update?api_key=QNRWO798ZZV2OEIL&" method="post" target="_blank">
+GRE Score         :<input type="text" name="field1"><br><br>
+
+TOEFL Score       :<input type="text" name="field2"><br><br>
+
+University Rating :<input type="text" name="field3"><br><br>
+
+SOP               :<input type="text" name="field4"><br><br>
+
+LOR               :<input type="text" name="field5"><br><br>
+
+CGPA              :<input type="text" name="field6"><br><br>
+
+Research          :<input type="text" name="field7"><br><br>
+
+<button type="submit">SUBMIT</button>
+</form>
+<br>
+<br>
+<br> 
+<br>
+<br>
+<br> 
+<br>
+<br>
+<br> 
+
+
+<table id= "userdata" border="2">
+  <thead>
+            <th>Date</th>
+            <th>S.no</th>
+            <th>COLLAGES</th>
+	
+             </thead>
+      <tbody>
+       </tbody>
+   </table>
+<iframe id='track' frameborder="0" scrolling="no" width="1" height="1">
+</script>
+
+</center>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
