@@ -1,3 +1,3 @@
-DEMONSTRATION VIDEO :: 
+DEMONSTRATION VIDEO
 
-https://drive.google.com/file/d/1Ed-lNOK7EKZu2-dXDwhieXlWATJWgx8M/view?usp=sharing
+https://youtu.be/8IP7jDq-IMA
